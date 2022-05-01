@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 60vw;
+    margin: 15vh auto;
+    display: grid;
+    grid-template-areas: 
+        "sedan suv luxury"
+    ;
+    font-weight: 400;
+}
+.container p {
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 10vh;
+}
+.container h1 {
+    color: hsl(0, 0%, 95%);
+    margin-bottom: 5vh;
+}
+.container img {
+    margin-bottom: 5vh;
+}
+.container button {
+    padding: .9em 2.5em;
+    border-radius: 25px;
+    border: none;
+    text-transform: capitalize; 
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    border: 1px solid hsl(0, 0%, 95%);
+}
+.sedans {
+    grid-area: sedan;
+    width: 20vw;
+    background-color: hsl(31, 77%, 52%);
+    padding: 3em;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.sedans button {
+    color: hsl(31, 77%, 52%);
+    background-color: hsl(0, 0%, 95%);
+    transition: .5s;
+    margin-top: .5vh;
+}
+.sedans button:hover {
+    cursor: pointer;
+    background-color: hsl(31, 77%, 52%);
+    color: hsl(0, 0%, 95%);
+}
+.suvs {
+    grid-area: suv;
+    width: 20vw;
+    background-color: hsl(184, 100%, 22%);
+    padding: 3em;
+}
+.suvs button {
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(184, 100%, 22%);
+    transition: .5s;
+    margin-top: .5vh;
+}
+.suvs button:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 95%);
+    background-color: hsl(184, 100%, 22%);
+}
+.luxury {
+    grid-area: luxury;
+    width: 20vw;
+    background-color: hsl(179, 100%, 13%);
+    padding: 3em;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.luxury p {
+    font-size: .96em;
+    margin-bottom: 11vh;
+}
+.luxury button {
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(179, 100%, 13%);
+    transition: .5s;
+}
+.luxury button:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 95%);
+    background-color: hsl(179, 100%, 13%);
+}
+
+@media screen and (max-width : 1024px) {
+    .container {
+        width: 90vmax;
+    }
+    .sedans {
+        width: 30vw;
+    }
+    .sedans button {
+        margin-top: 1.3vh;
+    }
+    .suvs {
+        width: 30vw;
+    }
+    .suvs button {
+        margin-top: 1.3vh;
+    }
+    .luxury {
+        width: 30vw;
+    }
+    .luxury p {
+        font-size: .98em;
+    }
+}
+@media screen and (max-width : 820px) {
+    .container {
+        width: 90vw;
+    }
+    .suvs button {
+        margin-top: 2.9vh;
+    }
+    .luxury button {
+        margin-top: .4vh;
+    }
+}
+@media screen and (max-width : 576px) {
+    .container {
+        grid-template-areas: 
+            "sedan"
+            "suv"
+            "luxury"
+        ;
+        width: 60vw;
+    }
+    .sedans {
+        width: 60vw;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .suvs {
+        width: 60vw;
+    }
+    .luxury {
+        width: 60vw;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+    .container p {
+        margin-bottom: 3vh;
+    }
+}
+@media screen and (max-width : 375px) {
+    .container button {
+        padding: .7em 1.5em;
+    }
+}
